@@ -1,0 +1,1 @@
+mkdir -p ./build && (cd ./build && cmake -GNinja -DBUILD_SHARED_LIBS=1 -DBUILD_SPECS=1 -DBUILD_TESTS=1 -DCMAKE_INSTALL_PREFIX=/p/local/ ./..)

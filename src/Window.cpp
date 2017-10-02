@@ -6,21 +6,22 @@ namespace Pulsr::Window
 		: Core::Window::Window(name)
 		, _handle(handle)
 	{
-		DLOGEVT(INFO, CONSTRUCT);
+		DLOG(DIAG);
 	}
 
 	WindowImpl::~WindowImpl()
 	{
-		DLOGEVT(INFO, DESTRUCT);
+		DLOG(DIAG);
 	}
 
 	void WindowImpl::Dispose()
 	{
-		DLOGEVT(INFO, DISPOSE);
+		DLOG(DIAG);
 	}
 
 	void WindowImpl::Open()
 	{
+		DLOG(DIAG);
 		ShowWindow(_handle, SW_SHOW);
 		Core::Window::Window::Open();
 		UpdateWindow(_handle);

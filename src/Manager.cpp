@@ -7,24 +7,24 @@ namespace Pulsr::Window
 		, _hInstance(GetModuleHandle(NULL))
 		, _windows(WindowList())
 	{
-		DLOGEVT(INFO, CONSTRUCT);
+		DLOG(DIAG);
 	}
 
 	ManagerImpl::~ManagerImpl()
 	{
-		DLOGEVT(INFO, DESTRUCT);
+		DLOG(DIAG);
 		Dispose();
 	}
 
 	void ManagerImpl::Dispose()
 	{
-		DLOGEVT(INFO, DISPOSE);
+		DLOG(DIAG);
 		_windows.clear();
 	}
 	
 	void ManagerImpl::Create( const std::string& name )
 	{
-		DLOGEVT(INFO, CALL);
+		DLOG(DIAG);
 
 		// 1. First, register a windows class for the window
 		WNDCLASSEX windowClass;
@@ -77,13 +77,13 @@ namespace Pulsr::Window
 
 	bool ManagerImpl::HasWork()
 	{
-		// DLOGEVT(INFO, CALL);
+		// DLOG(DIAG);
 		return !_windows.empty();
 	}
 
 	void ManagerImpl::Update()
 	{
-		// DLOGEVT(INFO, CALL);
+		// DLOG(DIAG);
 		MSG message;
 		ZeroMemory(&message, sizeof(MSG));
 		if (PeekMessage(&message, NULL, 0U, 0U, PM_REMOVE))
@@ -95,7 +95,7 @@ namespace Pulsr::Window
 		
 	LRESULT CALLBACK ManagerImpl::WndProcStatic(HWND handle, UINT message, WPARAM param1, LPARAM param2)
 	{
-		// DLOGEVT(INFO, CALL);
+		// DLOG(DIAG);
 		if (message == WM_NCCREATE)
 		{
 			auto pcs = reinterpret_cast<CREATESTRUCT*>(param2);
@@ -109,7 +109,7 @@ namespace Pulsr::Window
 
 	LRESULT CALLBACK ManagerImpl::WndProc(HWND handle, UINT message, WPARAM param1, LPARAM param2)
 	{
-		// DLOGEVT(INFO, CALL);
+		// DLOG(DIAG);
 		switch(message)
 		{
 			case WM_DESTROY:
