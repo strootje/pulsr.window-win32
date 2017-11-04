@@ -17,4 +17,4 @@ class GrawlogTestConan(ConanFile):
 
 	def test(self):
 		os.chdir("bin")
-		self.run(".%sGrawlog.PackageTests" % os.sep)
+		self.run(".%sPackageTests" % os.sep)
