@@ -1,7 +1,7 @@
 from conans import ConanFile, CMake
 import os
 
-class GrawlogTestConan(ConanFile):
+class PackageTestConan(ConanFile):
 	settings = "os", "compiler", "build_type", "arch"
 	generators = "cmake"
 
