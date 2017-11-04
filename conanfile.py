@@ -15,7 +15,7 @@ class PulsrWindowConan(ConanFile):
     generators = "cmake"
     exports_sources = "*"
 
-    requires = "gtest/1.8.0@conan/stable", "Grawlog/1.0@strootje/conan", "Pulsr.Core/1.0@strootje/stable"
+    requires = "gtest/1.8.0@conan/stable", "Grawlog/1.0@strootje/stable", "Pulsr.Core/1.0@strootje/stable"
 
     def configure(self):
         self.settings.os = "Windows"
