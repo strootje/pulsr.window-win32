@@ -1,6 +1,6 @@
 from conans import ConanFile, CMake
 
-class PulsrCoreConan(ConanFile):
+class PulsrWindowConan(ConanFile):
     name = "Pulsr.Window"
     version = "1.0"
 
@@ -15,9 +15,10 @@ class PulsrCoreConan(ConanFile):
     generators = "cmake"
     exports_sources = "*"
 
-    requires = "gtest/1.8.0@conan/stable", "Grawlog/1.0@strootje/conan", "Pulsr.Core/1.0@strootje/conan"
+    requires = "gtest/1.8.0@conan/stable", "Grawlog/1.0@strootje/conan", "Pulsr.Core/1.0@strootje/stable"
 
     def configure(self):
+        self.settings.os = "Windows"
         self.options["gtest"].shared = self.options.shared
         self.options["Grawlog"].shared = self.options.shared
         self.options["Pulsr.Core"].shared = self.options.shared

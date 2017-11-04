@@ -77,13 +77,13 @@ namespace Pulsr::Window
 
 	bool ManagerImpl::HasWork()
 	{
-		// DLOG(DIAG);
+		DLOG(DIAG);
 		return !_windows.empty();
 	}
 
 	void ManagerImpl::Update()
 	{
-		// DLOG(DIAG);
+		DLOG(DIAG);
 		MSG message;
 		ZeroMemory(&message, sizeof(MSG));
 		if (PeekMessage(&message, NULL, 0U, 0U, PM_REMOVE))
