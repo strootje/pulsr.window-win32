@@ -4,7 +4,7 @@ env:
      - CONAN_LOGIN_USERNAME: "strootje"
      - CONAN_USERNAME: "strootje"
      - CONAN_CHANNEL: "conan"
-     - CONAN_REMOTES: "https://api.bintray.com/conan/conan-community/conan"
+     - CONAN_REMOTES: "https://api.bintray.com/conan/conan-community/conan, https://api.bintray.com/conan/strootje/conan"
      - CONAN_UPLOAD: "https://api.bintray.com/conan/strootje/conan"
 
 linux: &linux
