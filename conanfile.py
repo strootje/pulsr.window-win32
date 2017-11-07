@@ -1,6 +1,6 @@
 from conans import ConanFile, CMake
 
-class PulsrWindowConan(ConanFile):
+class BuildConan(ConanFile):
     name = "Pulsr.Window"
     version = "1.0"
 
