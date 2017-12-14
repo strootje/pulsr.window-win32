@@ -1,12 +1,12 @@
-#ifndef __PULSR_WINDOWING_CONTAINERBUILDER__H__
-#define __PULSR_WINDOWING_CONTAINERBUILDER__H__
+#ifndef __PULSR_DRAWING_CONTAINERBUILDER__H__
+#define __PULSR_DRAWING_CONTAINERBUILDER__H__
 
 #include <Hypodermic/Hypodermic.h>
 
-namespace Pulsr { namespace Windowing
+namespace Pulsr { namespace Drawing
 {
 	/**
-	 * ContainerBuilder for the Windowing Module
+	 * ContainerBuilder for the Drawing Module
 	 */
 	class ContainerBuilder : public Hypodermic::ContainerBuilder
 	{

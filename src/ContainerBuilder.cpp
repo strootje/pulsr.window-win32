@@ -2,14 +2,14 @@
 #include <Grawlog/Logger.hpp>
 
 #include "./WindowFactoryImpl.hpp"
-#include <Pulsr.Core/Window/Factory.hpp>
+#include <Pulsr.Core/Drawing/WindowFactory.hpp>
 
-namespace Pulsr { namespace Windowing
+namespace Pulsr { namespace Drawing
 {
 	ContainerBuilder::ContainerBuilder()
 	{
 		DLOG(DIAG);
-		registerType<WindowFactoryImpl>().as<Core::Window::Factory>();
+		registerType<WindowFactoryImpl>().as<Core::Drawing::WindowFactory>();
 	}
 
 	ContainerBuilder::~ContainerBuilder()
